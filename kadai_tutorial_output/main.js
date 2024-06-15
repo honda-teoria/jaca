@@ -8,7 +8,8 @@ const untypedfield = document.getElementById('untyped');
 const typedfield = document.getElementById('typed');
 const wrap = document.getElementById('wrap');
 const start = document.getElementById('start');
-const count = document.getElementById('count');
+
+
 
 // 複数のテキストを格納する配列
 const textLists = [
@@ -62,12 +63,14 @@ const keyPress = e => {
   untypedfield.textContent = untyped;
   //スコアのインクリメント
   score++;
-
+  document.getElementById('countup').textContent = score;
   // テキストがなくなったら新しいテキストを表示
   if(untyped === '') {
     creatText();
   }
 };
+
+
 
 // タイピングスキルのランクを判定
 const rankCheck = score => {
